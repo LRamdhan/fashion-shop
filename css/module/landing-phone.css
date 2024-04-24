@@ -1,0 +1,25 @@
+div .intro .intro-left {
+  padding-top: 30px;
+  order: 2;
+  width: 75%;
+}
+div .intro .title {
+  order: 1;
+  padding-top: 100px;
+}
+div .intro .title h3 {
+  font-size: 30px;
+}
+div .intro .title h1 {
+  font-size: 55px;
+}
+div .intro .title h2 {
+  font-size: 33px;
+}
+
+div .promo .scroll-nav {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+/*# sourceMappingURL=landing-phone.css.map */

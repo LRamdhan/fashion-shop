@@ -1,0 +1,26 @@
+// intro-start
+.intro {
+    div & .intro-left {
+        padding-top: 30px;
+        order: 2;
+        width: 75%;
+    }
+
+    div & .title {
+        order: 1;
+        padding-top: 100px;
+        h3 {font-size: 30px;}
+        h1 {font-size: 55px}
+        h2 {font-size: 33px}
+    }
+}
+// intro-end
+
+// promo-slide-start
+div .promo {
+    .scroll-nav {
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+}
+// promo-slide-end

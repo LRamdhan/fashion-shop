@@ -1,0 +1,291 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 15px 100px 10px 100px;
+  background-color: #FDFDFD;
+  transition-duration: 300ms;
+  transition-animation-timing-function: ease-out;
+}
+header .circle-nav {
+  width: 18px;
+  height: 18px;
+  padding: 5px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+header .circle-nav i {
+  color: rgb(149, 149, 149);
+}
+header .sosmed, header .navigasi {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .sosmed img, header .navigasi img {
+  width: 100%;
+  height: 100%;
+}
+header .sosmed {
+  width: 160px;
+}
+header .navigasi {
+  width: 100px;
+  float: right;
+}
+header .logo {
+  width: 120px;
+  cursor: pointer;
+}
+header .hamberger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+header .hamberger .line {
+  height: 5px;
+  background-color: #454545;
+  border-radius: 2px;
+}
+header .hamberger .line:nth-child(2) {
+  width: 60%;
+  align-self: flex-end;
+}
+
+header .top-layer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.295);
+  transition: 300ms;
+}
+
+header aside {
+  position: fixed;
+  box-sizing: border-box;
+  padding: 15px;
+  top: 0;
+  left: 100%;
+  width: 80%;
+  height: 100%;
+  margin-right: 100%;
+  transform: translateX(0%);
+  background-color: rgb(105, 104, 104);
+  transition-duration: 300ms;
+  transition-animation-timing-function: ease-out;
+}
+header aside .exit {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+header aside .exit .circle-cross {
+  padding: 3px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+header aside .cross {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+header aside .cross .line {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+header aside .cross .line .sub-line {
+  width: 100%;
+  height: 5px;
+  background-color: #FDFDFD;
+  border-radius: 20px;
+}
+header aside .cross .line:first-child .sub-line {
+  transform: rotate(45deg);
+}
+header aside .cross .line:last-child .sub-line {
+  transform: rotate(-45deg);
+}
+
+header aside nav {
+  color: #FDFDFD;
+  text-transform: capitalize;
+}
+header aside nav > * {
+  display: flex;
+  align-items: center;
+}
+header aside nav img {
+  width: 25px;
+}
+header aside nav .separator {
+  height: 2px;
+  background-color: #FDFDFD;
+  border-radius: 20px;
+}
+header aside nav .arrow {
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid #FDFDFD;
+  border-left: 3px solid #FDFDFD;
+  transition-duration: 300ms;
+  transition-animation-timing-function: ease-out;
+}
+header aside nav .nav-title {
+  margin-left: 8px;
+}
+header aside nav .nav-el {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+header aside nav .nav-el:first-child, header aside nav .nav-el:nth-child(7) {
+  position: relative;
+  display: grid;
+  grid-template-columns: max-content auto 20px;
+  grid-template-rows: max-content max-content;
+  grid-template-areas: "satu dua tiga" "empat empat empat";
+}
+header aside nav .nav-el:first-child .click, header aside nav .nav-el:nth-child(7) .click {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  bottom: 0;
+}
+header aside nav .nav-el:first-child i, header aside nav .nav-el:nth-child(7) i {
+  grid-area: satu;
+}
+header aside nav .nav-el:first-child .nav-title, header aside nav .nav-el:nth-child(7) .nav-title {
+  grid-area: satu;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-left: 25px;
+}
+header aside nav .nav-el:first-child .arrow, header aside nav .nav-el:nth-child(7) .arrow {
+  grid-area: tiga;
+}
+header aside nav .nav-el:first-child .input-field, header aside nav .nav-el:first-child ul, header aside nav .nav-el:nth-child(7) .input-field, header aside nav .nav-el:nth-child(7) ul {
+  grid-area: empat;
+  border: none;
+  padding: 0;
+  transition-duration: 300ms;
+  transition-animation-timing-function: ease-out;
+}
+header aside nav .nav-el:first-child .input-field, header aside nav .nav-el:nth-child(7) .input-field {
+  display: grid;
+  grid-template-columns: auto 35px;
+  grid-grid-template-rows: max-content max-content;
+  grid-template-areas: "range range" "fill icon";
+  border-radius: 3px;
+  overflow: hidden;
+  transition-duration: 300ms;
+  transition-animation-timing-function: ease-out;
+}
+header aside nav .nav-el:first-child .input-field .range, header aside nav .nav-el:nth-child(7) .input-field .range {
+  grid-area: range;
+  height: 16px;
+}
+header aside nav .nav-el:first-child .input-field .btn-search, header aside nav .nav-el:nth-child(7) .input-field .btn-search {
+  grid-area: icon;
+  background-color: #FDFDFD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-top-right-radius: 3px;
+}
+header aside nav .nav-el:first-child .input-field .btn-search i, header aside nav .nav-el:nth-child(7) .input-field .btn-search i {
+  color: #454545;
+}
+header aside nav .nav-el:first-child .input-field input, header aside nav .nav-el:nth-child(7) .input-field input {
+  grid-area: fill;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  padding: 8px;
+  background-color: #FDFDFD;
+  color: #454545;
+  border-top-left-radius: 3px;
+}
+header aside nav .nav-el:first-child ul, header aside nav .nav-el:nth-child(7) ul {
+  overflow: hidden;
+  box-sizing: inherit;
+  padding-left: 50px;
+  transition: 400ms;
+}
+header aside nav .nav-el:first-child ul .range, header aside nav .nav-el:nth-child(7) ul .range {
+  height: 16px;
+}
+header aside nav .nav-el:first-child ul li, header aside nav .nav-el:nth-child(7) ul li {
+  margin-bottom: 18px;
+}
+header aside nav .nav-el:first-child ul li:hover a, header aside nav .nav-el:nth-child(7) ul li:hover a {
+  color: rgb(149, 149, 149);
+}
+header aside nav .nav-el:first-child ul li a, header aside nav .nav-el:nth-child(7) ul li a {
+  text-transform: inherit;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.shadow-on {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.212);
+}
+
+.side-bar-on {
+  transform: translateX(-100%);
+}
+
+.arrow-off {
+  transform: rotate(-45deg);
+}
+
+.arrow-on {
+  transform: rotate(-135deg);
+}
+
+.search-on {
+  height: 50px;
+}
+
+.search-off {
+  height: 0;
+}
+
+.category-on {
+  height: 135px;
+}
+
+.category-off {
+  height: 0;
+}
+
+div header .top-layer-transparant {
+  opacity: 0;
+}
+
+div header .top-layer-gone {
+  display: none;
+}
+
+/*# sourceMappingURL=header.css.map */

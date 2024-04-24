@@ -1,1 +1,0 @@
-import * as obj from './landing.js';

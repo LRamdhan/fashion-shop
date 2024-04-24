@@ -1,0 +1,157 @@
+@use '../partials/color' as *;
+@use '../partials/duration' as *;
+
+.popular {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: grid;
+    grid: {
+        template-rows: repeat(max-content, 2);
+        template-columns: 100%;
+        gap: 15px;
+    }
+    justify-items: center;
+}
+
+.popular-tab {
+    width: 16em;
+    font-size: 26px;
+    color: $bg-aside;
+    text-transform: capitalize;
+    display: grid;
+    grid: {
+        grid-template-columns: 100%;
+        template-rows: repeat(max-content, 2);
+        gap: 5px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        li { 
+            display: inline-block; 
+            // cursor: pointer;
+        }
+    }
+
+    .indicator {
+        width: 85px;
+        height: 0.15em;
+        border-radius: 2px;;
+        background-color: $button;
+        transition: {
+            duration: $sidebar-dr;
+            timing-function: ease-in-out;
+        }
+    }
+}
+
+.popular-product {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: grid;
+    grid: {
+        template-columns: max-content 750px max-content;
+        grid-template-rows: max-content;
+        gap: 17px;
+    }
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-left, .slide-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 50px;
+    cursor: pointer;
+}
+
+.group-product {
+    overflow: hidden;
+    display: grid;
+    scroll-behavior: smooth;
+
+    grid: {
+        template-columns: repeat(3, 100%);
+        template-rows: max-content;
+    }
+    column-gap: 20px;
+    
+    & > * {
+        display: grid;
+        grid: {
+            template-columns: repeat(4, 1fr);
+            template-rows: repeat(2, max-content);
+        }
+        
+        img {width: 100%}
+
+        .img-box {
+            position: relative;
+            overflow: hidden;
+
+            &:first-child {
+                padding-bottom: 20px;
+            }
+
+                
+            &:hover .detail-img {
+                visibility: visible;
+            }
+        }
+
+        .detail-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: $base-ligh-t;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            font-size: 15px;
+            text-align: center;
+
+            & > * {
+                margin-bottom: 0.3em;
+            }
+
+            i {
+                color: $button;
+                font-size: 1em;
+            }
+
+            h3 {
+                text-transform: capitalize;
+                font-size: 1.1em;
+                font-weight: bolder;
+            }
+
+            h3:last-of-type {
+                font-size: 1.6em;
+                color: $button;
+            }
+
+            .btn-cart {
+                font-size: 0.8em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $base-light;
+                text-transform: uppercase;
+                width: 10em;
+                height: 3em;
+                background-color: $button;
+                cursor: pointer;
+            }
+        }
+    }
+}

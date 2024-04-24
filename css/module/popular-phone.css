@@ -1,0 +1,11 @@
+.popular-tab {
+  width: 16em;
+  font-size: 20px;
+}
+
+.group-product > * {
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, max-content);
+}
+
+/*# sourceMappingURL=popular-phone.css.map */

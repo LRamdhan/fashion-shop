@@ -1,0 +1,8 @@
+.blog {
+  grid-template-columns: 80%;
+  grid-template-rows: max-content;
+  grid-template-auto-rows: max-content;
+  grid-template-areas: "title";
+}
+
+/*# sourceMappingURL=blog-phone.css.map */
