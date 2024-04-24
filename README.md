@@ -1,2 +1,2 @@
-# fashion-shop
-landing page
+# Fashion Shop
+Simple landing page for fashion shop.
